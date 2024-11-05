@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-commerce - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div>
+        <img src="images/logo.png" class ="logo" alt="logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Checkout</a></li>
+            <li><a href="checkout.html">🛍️ </a>
+            <span id="cart-count"></span></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Search Bar and Sorting Options -->
+<div id="search-bar">
+    <input type="text" id="search-input" placeholder="Search products..." oninput="searchProducts()">
+    <select id="sort-select" onchange="sortProducts()">
+        <option value="default">Sort by</option>
+        <option value="low-high">Price: Low to High</option>
+        <option value="high-low">Price: High to Low</option>
+    </select>
+</div>
+
+<!-- Products Display Section -->
+<div id="product-results"></div>
+
+<script src="scripts.js"></script>
+<script>
+    // Load products when the page is loaded
+    document.addEventListener('DOMContentLoaded', displayProducts);
+</script>
+</body>
+</html>
