@@ -1,1 +1,18 @@
-# E-commerce
+# E-commerce 🛍️ 
+
+### JavaScript 👩🏻‍💻
+
+![Screenshot 2024-11-05 at 17 19 19](https://github.com/user-attachments/assets/a9de9ddb-3cfa-4917-91a9-249a53c7c1eb)
+
+### Sorting products by price
+
+![Screenshot 2024-11-05 at 17 23 22](https://github.com/user-attachments/assets/1c91d2ae-fe59-4e17-a3cb-9323678bc63b)
+
+### Searching Products by name
+
+![Screenshot 2024-11-05 at 17 24 14](https://github.com/user-attachments/assets/15ce979b-1eb2-4d83-941b-01d412cdfbd7)
+
+
+
+### Checkout Summary
+![Screenshot 2024-11-05 at 17 21 16](https://github.com/user-attachments/assets/38d1ba7e-847b-4e5a-846e-3f38d159c3af)
