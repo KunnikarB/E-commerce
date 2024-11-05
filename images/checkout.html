@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Checkout - K-commerce</title>
+</head>
+<body>
+  <header>
+    <h1 id="purchased">Checkout 🛍️ </h1>
+    <span id="cart-count"></span>
+      <nav>
+        <a class="home" href="index.html">🏠</a>  
+    </nav>    
+  </header>
+
+  <main> 
+  <div class="checkout-grid">
+    <div class="order-summary">
+      <h2>Checkout</h2>  
+      <div  id="cart-items"></div>
+      <label for="delivery-select">Select Delivery Option:</label>
+      <select id="delivery-select" onchange="loadCartItems()">
+        <option value="0">Select Delivery Option</option>
+        <option value="5">Standard Delivery - $5</option>
+        <option value="10">Express Delivery - $10</option>
+      </select>
+    </div>
+
+    <div class="payment-summary">
+      <h2>Price Breakdown:</h2>
+      <div id="price-breakdown">
+      <p>Subtotal: $<span id="subtotal">0.00</span></p>
+      <p>Tax (10%): $<span id="tax">0.00</span></p>
+      <p>Delivery Cost: $<span id="delivery-cost">0.00</span></p>
+      <h4>Total Price: $<span id="total-price">0.00</span></h4>
+      </div>
+      <button onclick="confirmPurchase()">Confirm Purchase</button>
+      </div>
+    </div>
+  </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
