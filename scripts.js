@@ -13,7 +13,7 @@ const products = [
     name: 'Laptop',
     category: 'electronics',
     price: 1599,
-    description: 'High-performance laptop for work and gaming',
+    description: 'High-performance laptop for gaming',
     img: 'images/laptop.jpg',
   },
   {
@@ -37,7 +37,7 @@ const products = [
     name: 'iMac',
     category: 'electronics',
     price: 1299,
-    description: 'Modern desktop computer for your workspace',
+    description: 'Modern desktop for your workspace',
     img: 'images/iMac.jpg',
   },
   {
@@ -45,7 +45,7 @@ const products = [
     name: 'Shoes',
     category: 'clothing',
     price: 195,
-    description: 'Comfortable and stylish shoes for all occasions',
+    description: 'Comfortable and stylish for all occasions',
     img: 'images/shoes.jpg',
   },
 ];
@@ -127,6 +127,10 @@ function displayProducts() {
             <h3><a href="product.html?id=${product.id}">${product.name}</a></h3>
             <p>${product.description}</p>
             <p>Price: $${product.price}</p>
+            <div class ="added-to-cart js-added-to-cart-${product.id}" >
+              <img src="images/checkmark.png" alt="checked">
+              <p>Added</p>
+            </div>
             <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
         `;
     productResults.appendChild(productDiv);
@@ -135,6 +139,20 @@ function displayProducts() {
   // Add event listeners to "Add to Cart" buttons
   attachAddToCartListeners();
 }
+
+// Show message when product is added to cart
+function showMessage(productId) {
+  // Show the added to cart message
+  const addedMessage = document.querySelector(`.js-added-to-cart-${productId}`);
+
+  addedMessage.classList.add('added-to-cart-visible');
+
+  // Hide the added to cart message after 2 seconds
+  setTimeout(() => {
+    addedMessage.classList.remove('added-to-cart-visible');
+  }, 2000);
+}
+
 
 // Function to add product to cart
 function addToCart(productId) {
@@ -150,6 +168,7 @@ function addToCart(productId) {
 
   localStorage.setItem('cart', JSON.stringify(cart)); // Store cart in local storage
   updateCartCount();
+  
 }
 
 // Function to update cart count
@@ -296,6 +315,7 @@ function attachAddToCartListeners() {
     button.addEventListener('click', (event) => {
       const productId = parseInt(event.target.dataset.id);
       addToCart(productId);
+      showMessage(productId);
     });
   });
 }
