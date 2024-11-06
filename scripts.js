@@ -105,12 +105,15 @@ function getDeliveryCost() {
 
 // Function to confirm purchase
 function confirmPurchase() {
-  alert('Thank you for your purchase!');
+  document.textContent('Thank you for your purchase!');
   cart = []; // Clear the cart after purchase
   localStorage.removeItem('cart'); // Remove from local storage
   updateCartCount();
   loadCartItems(); // Update checkout page
 }
+
+document.addEventListener('DOMContentLoaded', displayProducts);
+
 
 // Display all products on the landing page
 function displayProducts() {
@@ -122,6 +125,7 @@ function displayProducts() {
     productDiv.innerHTML = `
             <img src="${product.img}" alt="${product.name}">
             <h3><a href="product.html?id=${product.id}">${product.name}</a></h3>
+            <p>${product.description}</p>
             <p>Price: $${product.price}</p>
             <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
         `;
@@ -297,13 +301,14 @@ function attachAddToCartListeners() {
 }
 
 // Confirm purchase function
-function confirmPurchase() {
-  alert('Thank you for your purchase!');
-  cart = []; // Clear the cart after purchase
-  localStorage.removeItem('cart'); // Remove from local storage
-  updateCartCount();
-  loadCartItems(); // Update checkout page
-}
+// function confirmPurchase() {
+//   document.getElementsByTagName('h1')[0].textContent = 'Thank you for your purchase!';
+  
+//   cart = []; // Clear the cart after purchase
+//   localStorage.removeItem('cart'); // Remove from local storage
+//   updateCartCount();
+//   loadCartItems(); // Update checkout page
+// }
 
 // Function to load cart items on the checkout page
 function loadCartItems() {
@@ -341,29 +346,14 @@ function loadCartItems() {
 
 // Function to confirm purchase
 function confirmPurchase() {
-  alert('Thank you for your purchase!');
+  document.getElementById('confirmed').textContent = 'Thank you for your purchase!';
+
   cart = []; // Clear the cart after purchase
   localStorage.removeItem('cart'); // Remove from local storage
   updateCartCount();
   loadCartItems(); // Update checkout page
 }
 
-// Function to get product details from the URL
-function getProductDetails() {
-  const params = new URLSearchParams(window.location.search);
-  const productId = params.get('id');
-  const product = products.find((p) => p.id == productId);
-
-  if (product) {
-    const productDetailsDiv = document.getElementById('product-details');
-    productDetailsDiv.innerHTML = `
-            <h2>${product.name}</h2>
-            <img src="${product.img}" alt="${product.name}">
-            <p>${product.description}</p>
-            <p>Price: $${product.price}</p>
-        `;
-  }
-}
 
 // Add product to cart
 document.getElementById('add-to-cart-btn').onclick = function () {
@@ -375,11 +365,3 @@ document.getElementById('add-to-cart-btn').onclick = function () {
     addToCart(product.id);
   }
 };
-
-// Go back to the previous page
-function goBack() {
-  window.history.back();
-}
-
-// Load product details on page load
-document.addEventListener('DOMContentLoaded', getProductDetails);

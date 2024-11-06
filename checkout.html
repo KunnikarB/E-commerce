@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <h1 id="purchased">Checkout 🛍️ </h1>
+    <h1 id="confirmed">Checkout 🛍️ </h1>
     <span id="cart-count"></span>
       <nav>
         <a class="home" href="index.html">🏠</a>  
@@ -18,7 +18,7 @@
   <main> 
   <div class="checkout-grid">
     <div class="order-summary">
-      <h2>Checkout</h2>  
+      <h2>Review your order</h2>  
       <div  id="cart-items"></div>
       <label for="delivery-select">Select Delivery Option:</label>
       <select id="delivery-select" onchange="loadCartItems()">
@@ -29,7 +29,7 @@
     </div>
 
     <div class="payment-summary">
-      <h2>Price Breakdown:</h2>
+      <h2>Order Summary:</h2>
       <div id="price-breakdown">
       <p>Subtotal: $<span id="subtotal">0.00</span></p>
       <p>Tax (10%): $<span id="tax">0.00</span></p>
