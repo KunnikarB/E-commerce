@@ -124,7 +124,7 @@ function displayProducts() {
     productDiv.classList.add('product');
     productDiv.innerHTML = `
             <img src="${product.img}" alt="${product.name}">
-            <h3><a href="product.html?id=${product.id}">${product.name}</a></h3>
+            <h3>${product.name}</a></h3>
             <p>${product.description}</p>
             <p>Price: $${product.price}</p>
             <div class ="added-to-cart js-added-to-cart-${product.id}" >
