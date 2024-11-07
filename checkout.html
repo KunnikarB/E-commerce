@@ -11,23 +11,20 @@
 <body>
   <header>
     <div>
-    <img src="images/logo.png" class ="logo" alt="logo">
-    </div>
-  <div>
-  <h1 id="confirmed">Checkout 🛍️ </h1>
-    <nav>
-    <ul>
-      <li><a href="index.html"><a class="home" href="index.html">🏠</a> </a></li>
-      <li><a  href="checkout.html"></a>
-      <span id="cart-count"></span></li>
-    </ul>
-  </nav>
-      
-    <!-- <h1 >Checkout 🛍️ </h1>
-    <span id="cart-count"></span> -->
+      <img src="images/logo.png" class ="logo" alt="logo">
     </div>
     <div>
-    <button class="darkmode-button" onclick="myFunction()">Dark Mode</button> 
+      <h1 id="confirmed">Checkout 🛍️ </h1>
+      <nav>
+        <ul>
+          <li><a href="index.html"><a class="home" href="index.html">🏠</a> </a></li>
+          <li><a  href="checkout.html"></a>
+          <span id="cart-count"></span></li>
+        </ul>
+      </nav>
+    </div>
+    <div>
+      <button class="darkmode-button" onclick="myFunction()">Dark Mode</button> 
     </div>
   </header>
 
@@ -35,7 +32,7 @@
     <div class="checkout-grid">
       <div class="order-summary">
         <h2>Review your order :</h2>  
-        <div  id="cart-items"></div>
+        <div id="cart-items"></div>
         <label for="delivery-select">Select Delivery Option:</label>
         <select id="delivery-select" onchange="loadCartItems()">
         <option value="0">Free Delivery(14 days) - $0</option>
@@ -52,31 +49,31 @@
         <p>Delivery Cost : $<span id="delivery-cost">0.00</span></p>
         <h4>Total Price : $<span id="total-price">0.00</span></h4>
         </div>
-        <button onclick="confirmPurchase()">Confirm Purchase</button>
+        <button class="btn" onclick="confirmPurchase()">Confirm Purchase</button>
       </div>
     </div>
-</main>
+  </main>
 
-<!-- Footer Section -->
-    <footer class="footer">
-      <div class="copy">
-        <p>
-          &copy; 2024  <a href="index.html">K-Commerce</a> | All right reserved.
-        </p>
-        <div class="icons">
-          <a href="https://www.facebook.com/KunnikarB/" target="_blank"><i class="fa-brands fa-facebook"></i></a
-          >
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="copy">
+      <p>
+        &copy; 2024  <a href="index.html">K-Commerce</a> | All right reserved.
+      </p>
+      <div class="icons">
+        <a href="https://www.facebook.com/KunnikarB/" target="_blank"><i class="fa-brands fa-facebook"></i></a
+        >
 
-          <a href="https://www.instagram.com/kunnikar_b/" target="_blank"><i class="fa-brands fa-instagram"></i>
-          </a>
-          
-          <a href="mailto:k-vintagebutik@gmail.com"><i class="fa-solid fa-square-envelope"></i></a>
-        </div>
+        <a href="https://www.instagram.com/kunnikar_b/" target="_blank"><i class="fa-brands fa-instagram"></i>
+        </a>
+        
+        <a href="mailto:k-vintagebutik@gmail.com"><i class="fa-solid fa-square-envelope"></i></a>
       </div>
-    </footer>   
-<!-- End Of Footer Section -->
+    </div>
+  </footer>   
+  <!-- End Of Footer Section -->
 
-<script src="Scripts/app.js"></script>
-<script src="Scripts/scripts.js"></script>
+  <script src="Scripts/app.js"></script>
+  <script src="Scripts/scripts.js"></script>
 </body>
 </html>
