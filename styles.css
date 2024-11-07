@@ -315,6 +315,12 @@ select option {
   margin-top: 10px;
 }
 
+@media (max-width: 800px) {
+  #cart-items button {
+    width: 40%;
+  }
+}
+
 @media (max-width: 600px) {
   .checkout-grid {
     grid-template-columns: 1fr;
@@ -341,6 +347,16 @@ select option {
 
   .darkmode-button {
     display: none;
+  }
+}
+
+@media  (max-width: 320px) {
+  #cart-items button {
+    width: 50%;
+  }
+
+  .payment-summary h2, .order-summary h2 {
+    font-size: 1.3rem;
   }
 }
 
