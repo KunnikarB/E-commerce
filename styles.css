@@ -304,8 +304,13 @@ select option {
   width: 100%;
 }
 
-.order-summary label, .order-summary select {
-  font-size: 1.2rem;
+.order-summary label {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.order-summary select {
+  font-size: 0.9rem;
 }
 
 .payment-summary h4 {
@@ -314,7 +319,7 @@ select option {
 
 .payment-summary button {
   width: 80%;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 
 }
 .payment-summary button:hover {
