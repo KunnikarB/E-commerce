@@ -36,16 +36,6 @@ header {
   text-align: center;
 }
 
-.checkout-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #dd4c93;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
 .logo {
   width: 100px;
 }
@@ -240,6 +230,11 @@ select option {
   border-radius: 10px;
 }
 
+.checkout {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 .cart-item {
   margin-bottom: 10px;
   border: 1px solid #fff;
@@ -322,7 +317,7 @@ select option {
 
 .payment-summary h2,
 .order-summary h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .payment-summary p {
