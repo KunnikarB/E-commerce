@@ -1,3 +1,4 @@
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -5,9 +6,40 @@ body {
   background: #feadbb;
 }
 
+.dark-mode {
+  background-color: #000;
+}
+
+.darkmode-button {
+  background: linear-gradient(
+    90deg,
+    rgb(252, 115, 156) 0%,
+    rgb(139, 102, 241) 100%
+  );
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  width: 100px;
+  margin: 10px auto;
+}
+
 header {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #dd4c93;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.checkout-header {
+  display: flex;
   flex-direction: column;
+  align-items: center;
   background: #dd4c93;
   color: #fff;
   padding: 20px;
@@ -53,10 +85,7 @@ nav ul li a:hover {
   max-width: 1100px;
   padding-left: 30px;
   padding-right: 30px;
-  margin-top: 140px;
-  margin-bottom: 100px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px auto;
 }
 
 #search-bar {
@@ -72,7 +101,7 @@ nav ul li a:hover {
   border-radius: 5px;
   font-size: 16px;
 }
-@media  screen and (max-width: 320px) {
+@media screen and (max-width: 320px) {
   #search-input,
   #sort-select {
     padding: 5px;
@@ -81,7 +110,6 @@ nav ul li a:hover {
     border-radius: 5px;
     font-size: 12px;
   }
-  
 }
 @media screen and (max-width: 600px) {
   #search-input,
@@ -315,5 +343,90 @@ select option {
 
   .payment-summary button {
     width: 80%;
+  }
+
+  .darkmode-button {
+    display: none;
+  }
+}
+
+/* Footer */
+ .footer {
+  display: flex;
+  background: #dd4c93;
+  color: #fff;
+} 
+
+.footer .copy {
+  border-radius: 15px;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.7rem;
+  margin: 2rem auto;
+  
+}
+
+.footer .copy p {
+  margin: 1rem; 
+}
+
+.footer .copy p a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer .icons a {
+  margin: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .icons i:hover {
+  background-color: violet;
+  border-radius: 50%;
+}
+
+.footer p a {
+  font-weight: 800;
+  background: linear-gradient(
+    90deg,
+    rgb(252, 115, 156) 0%,
+    rgb(139, 102, 241) 100%
+  );
+  padding: 0.5rem;
+  border-radius: 15px;
+}
+
+.footer p a:hover {
+  background: none;
+  color: violet;
+  background-color: white;
+}
+
+
+@media only screen and (max-width: 568px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer .copy {
+    margin: 0 auto;
+  }
+
+  .footer .icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer .icons a {
+    margin: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .footer .copy p {
+    font-size: 0.8rem;
   }
 }

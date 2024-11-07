@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Checkout - K-commerce</title>
+<head >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/6c722e42cf.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Checkout - K-commerce</title>
 </head>
 <body>
-  <header>
+  <header class="checkout-header">
     <h1 id="confirmed">Checkout 🛍️ </h1>
     <span id="cart-count"></span>
       <nav>
         <a class="home" href="index.html">🏠</a>  
-    </nav>    
+    </nav> 
+    <button class="darkmode-button" onclick="myFunction()">Dark Mode</button>   
   </header>
 
-  <main> 
-  <div class="main">
+  <main class="main"> 
     <div class="checkout-grid">
       <div class="order-summary">
         <h2>Review your order</h2>  
@@ -40,9 +42,28 @@
         <button onclick="confirmPurchase()">Confirm Purchase</button>
       </div>
     </div>
-  </div>
 </main>
 
-    <script src="scripts.js"></script>
+<!-- Footer Section -->
+    <footer class="footer">
+      <div class="copy">
+        <p>
+          &copy; 2024  <a href="index.html">K-Commerce</a> | All right reserved.
+        </p>
+        <div class="icons">
+          <a href="https://www.facebook.com/KunnikarB/" target="_blank"><i class="fa-brands fa-facebook"></i></a
+          >
+
+          <a href="https://www.instagram.com/kunnikar_b/" target="_blank"><i class="fa-brands fa-instagram"></i>
+          </a>
+          
+          <a href="mailto:k-vintagebutik@gmail.com"><i class="fa-solid fa-square-envelope"></i></a>
+        </div>
+      </div>
+    </footer>   
+<!-- End Of Footer Section -->
+
+<script src="Scripts/app.js"></script>
+<script src="Scripts/scripts.js"></script>
 </body>
 </html>

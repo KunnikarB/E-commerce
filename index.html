@@ -1,40 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K-commerce - Home</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/6c722e42cf.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>K-commerce - Home</title>
 </head>
 <body>
 
 <header>
-    <div>
-        <img src="images/logo.png" class ="logo" alt="logo">
-    </div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="checkout.html">Checkout</a></li>
-            <li><a href="checkout.html">🛍️ </a>
-            <span id="cart-count"></span></li>
-        </ul>
-    </nav>
+  <div>
+    <img src="images/logo.png" class ="logo" alt="logo">
+  </div>
+  <div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="checkout.html">Checkout</a></li>
+      <li><a href="checkout.html">🛍️ </a>
+      <span id="cart-count"></span></li>
+    </ul>
+  </nav>
+  </div>
+  <div>
+  <button class="darkmode-button" onclick="myFunction()">Dark Mode</button>
+  </div>
 </header>
 
-<!-- Search Bar and Sorting Options -->
-<div id="search-bar">
+<main class="main">
+  <!-- Search Bar and Sorting Options -->
+  <div id="search-bar">
     <input type="text" id="search-input" placeholder="Search products..." oninput="searchProducts()">
     <select id="sort-select" onchange="sortProducts()">
-        <option value="default">Sort by</option>
-        <option value="low-high">Price: Low to High</option>
-        <option value="high-low">Price: High to Low</option>
+      <option value="default">Sort by</option>
+      <option value="low-high">Price: Low to High</option>
+      <option value="high-low">Price: High to Low</option>
     </select>
-</div>
+  </div>
 
-<!-- Products Display Section -->
-<div id="product-results"></div>
+  <!-- Products Display Section -->
+  <div id="product-results"></div>
+</main>
 
-<script src="scripts.js"></script>
+<!-- Footer Section -->
+    <footer class="footer">
+      <div class="copy">
+        <p>
+          &copy; 2024  <a href="index.html">K-Commerce</a> | All right reserved.
+        </p>
+        <div class="icons">
+          <a href="https://www.facebook.com/KunnikarB/" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a
+          >
+
+          <a href="https://www.instagram.com/kunnikar_b/" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i>
+          </a>
+          
+          <a href="mailto:k-vintagebutik@gmail.com"><i class="fa-solid fa-square-envelope fa-2x"></i></a>
+        </div>
+      </div>
+    </footer>   
+<!-- End Of Footer Section -->
+
+<script src="Scripts/app.js"></script>
+<script src="Scripts/scripts.js"></script>
 </body>
 </html>
