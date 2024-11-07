@@ -23,6 +23,7 @@ body {
   border-radius: 50px;
   width: 100px;
   margin-right: 1.5rem;
+  font-size: 1rem;
 }
 
 header {
@@ -53,6 +54,7 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  font-size: 1.5rem;
 }
 
 nav ul li a:hover {
@@ -203,12 +205,13 @@ select option {
 #cart-count {
   margin-bottom: 1rem;
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .checkout-grid {
   display: grid;
   grid-template-columns: 1fr 400px;
-  column-gap: 12px;
+  column-gap: 1rem;
   align-items: baseline;
 }
 
@@ -275,7 +278,7 @@ select option {
   border-radius: 10px;
   height: auto;
   margin-bottom: 1rem;
-  text-align: start;
+  text-align: center;
 }
 
 .order-summary {
@@ -283,7 +286,7 @@ select option {
 }
 
 .payment-summary {
-  width: 60%;
+  width: 80%;
 }
 
 .payment-summary button,
@@ -300,7 +303,19 @@ select option {
   width: 100%;
 }
 
+.order-summary label, .order-summary select {
+  font-size: 1.2rem;
+}
 
+.payment-summary h4 {
+  font-size: 1.4rem;
+}
+
+.payment-summary button {
+  width: 80%;
+  font-size: 1.2rem;
+
+}
 .payment-summary button:hover {
   background: #feadbb;
   cursor: pointer;
@@ -311,17 +326,12 @@ select option {
   border: 1px solid #fff;
   padding: 10px;
   border-radius: 5px;
-  width: 70%;
   margin-top: 10px;
+  margin: 10px auto;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 800px) {
-  #cart-items button {
-    width: 40%;
-  }
-}
-
-@media (max-width: 600px) {
   .checkout-grid {
     grid-template-columns: 1fr;
   }
@@ -330,7 +340,8 @@ select option {
   }
   .payment-summary,
   .order-summary {
-    width: 80%;
+    width: 90%;
+    margin: 10px auto;
   }
 
   #cart-items button {
@@ -369,10 +380,10 @@ select option {
 
 .footer .copy {
   border-radius: 15px;
-  padding: 0.5rem;
+  padding: 0.1rem;
   text-align: center;
-  font-size: 0.7rem;
-  margin: 2rem auto;
+  font-size: 0.8rem;
+  margin: 1rem auto;
   
 }
 
@@ -391,9 +402,21 @@ select option {
   text-decoration: none;
 }
 
-.footer .icons i:hover {
-  background-color: violet;
+.footer .icons i {
+  font-size: 1rem;
+  padding: 0.5rem;
   border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    rgb(252, 115, 156) 0%,
+    rgb(139, 102, 241) 100%
+  );
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.footer .icons i:hover {
+  transform: scale(1.1);
 }
 
 .footer p a {
