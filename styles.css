@@ -47,11 +47,6 @@ nav ul li a:hover {
     display: block;
     margin: 10px 0;
   }
-
-    nav ul li a {
-        display: none;
-    }
-    
 }
 
 .main {
@@ -76,6 +71,29 @@ nav ul li a:hover {
   border: 1px solid violet;
   border-radius: 5px;
   font-size: 16px;
+}
+@media  screen and (max-width: 320px) {
+  #search-input,
+  #sort-select {
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid violet;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  
+}
+@media screen and (max-width: 600px) {
+  #search-input,
+  #sort-select {
+    display: block;
+    margin: 10px auto;
+  }
+
+  nav ul li:first-child,
+  .logo {
+    display: none;
+  }
 }
 
 #product-results {
@@ -174,13 +192,13 @@ select option {
 }
 
 @media (max-width: 1000px) {
-    .checkout-grid {
-        grid-template-columns: 1fr;
-    }
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
 
-    #checkout-section {
-        margin: 20px auto;
-    }
+  #checkout-section {
+    margin: 20px auto;
+  }
 }
 
 #checkout-section {
