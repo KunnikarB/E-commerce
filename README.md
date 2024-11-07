@@ -15,4 +15,15 @@
 
 
 ### Checkout Summary
+
 ![Screenshot 2024-11-05 at 17 21 16](https://github.com/user-attachments/assets/38d1ba7e-847b-4e5a-846e-3f38d159c3af)
+
+### Modified Style, Added Animation and Dark Mode
+
+![Screenshot 2024-11-07 at 16 49 57](https://github.com/user-attachments/assets/c267d3ff-07ea-4519-8903-494a8f5ab41a)
+
+![Screenshot 2024-11-07 at 16 54 28](https://github.com/user-attachments/assets/9b6e4c1c-12fa-4342-8713-d0a8183989c0)
+
+
+
+
