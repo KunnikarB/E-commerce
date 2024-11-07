@@ -180,24 +180,6 @@ function updateCartCount() {
   )} item(s) in cart`;
 }
 
-// Function to load product details
-// function loadProductDetails() {
-//   const productId = new URLSearchParams(window.location.search).get('id');
-//   const product = products.find((p) => p.id == productId);
-
-//   if (product) {
-//     const productDetails = document.getElementById('product-details');
-//     productDetails.innerHTML = `
-//             <img src="${product.img}" alt="${product.name}">
-//             <h2>${product.name}</h2>
-//             <p>${product.description}</p>
-//             <p>Price: $${product.price}</p>
-//         `;
-//     document.getElementById('add-to-cart-btn').onclick = () =>
-//       addToCart(product.id);
-//   }
-// }
-
 // Function to load cart items on the checkout page
 function loadCartItems() {
   const cartItemsDiv = document.getElementById('cart-items');
