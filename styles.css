@@ -115,7 +115,6 @@ nav ul li a:hover {
     margin: 10px auto;
   }
 
-  nav ul li:first-child,
   .logo {
     display: none;
   }
@@ -364,12 +363,21 @@ select option {
 }
 
 @media  (max-width: 320px) {
+
   #cart-items button {
-    width: 50%;
+    width: 30%;
   }
 
-  .payment-summary h2, .order-summary h2 {
-    font-size: 1.3rem;
+  .payment-summary p {
+    width: 60%;
+  }
+
+  .payment-summary button {
+    width: 60%;
+  }
+
+  .darkmode-button {
+    display: none;
   }
 }
 
