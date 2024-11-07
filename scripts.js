@@ -181,22 +181,22 @@ function updateCartCount() {
 }
 
 // Function to load product details
-function loadProductDetails() {
-  const productId = new URLSearchParams(window.location.search).get('id');
-  const product = products.find((p) => p.id == productId);
+// function loadProductDetails() {
+//   const productId = new URLSearchParams(window.location.search).get('id');
+//   const product = products.find((p) => p.id == productId);
 
-  if (product) {
-    const productDetails = document.getElementById('product-details');
-    productDetails.innerHTML = `
-            <img src="${product.img}" alt="${product.name}">
-            <h2>${product.name}</h2>
-            <p>${product.description}</p>
-            <p>Price: $${product.price}</p>
-        `;
-    document.getElementById('add-to-cart-btn').onclick = () =>
-      addToCart(product.id);
-  }
-}
+//   if (product) {
+//     const productDetails = document.getElementById('product-details');
+//     productDetails.innerHTML = `
+//             <img src="${product.img}" alt="${product.name}">
+//             <h2>${product.name}</h2>
+//             <p>${product.description}</p>
+//             <p>Price: $${product.price}</p>
+//         `;
+//     document.getElementById('add-to-cart-btn').onclick = () =>
+//       addToCart(product.id);
+//   }
+// }
 
 // Function to load cart items on the checkout page
 function loadCartItems() {
@@ -319,16 +319,6 @@ function attachAddToCartListeners() {
     });
   });
 }
-
-// Confirm purchase function
-// function confirmPurchase() {
-//   document.getElementsByTagName('h1')[0].textContent = 'Thank you for your purchase!';
-  
-//   cart = []; // Clear the cart after purchase
-//   localStorage.removeItem('cart'); // Remove from local storage
-//   updateCartCount();
-//   loadCartItems(); // Update checkout page
-// }
 
 // Function to load cart items on the checkout page
 function loadCartItems() {
