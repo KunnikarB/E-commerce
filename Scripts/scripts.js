@@ -61,60 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Function to load cart items on the checkout page
-function loadCartItems() {
-  const cartItemsDiv = document.getElementById('cart-items');
-  cartItemsDiv.innerHTML = '';
 
-  let total = 0;
-  cart.forEach((product, index) => {
-    const itemDiv = document.createElement('div');
-    itemDiv.classList.add('cart-item');
-    itemDiv.innerHTML = `
-            <p>${product.name} - $${product.price} x ${product.quantity}</p>
-            <button onclick="removeFromCart(${index})">Remove</button>
-            <input type="number" value="${product.quantity}" min="1" onchange="updateCart(${index}, this.value)">
-        `;
-    cartItemsDiv.appendChild(itemDiv);
-    total += product.price * product.quantity;
-  });
 
-  const taxRate = 0.1; // 10% tax
-  const deliveryCost = getDeliveryCost(); // Get selected delivery cost
-
-  // Calculate totals
-  const taxAmount = total * taxRate;
-  const totalWithTax = total + taxAmount + deliveryCost;
-
-  // Displaying all costs clearly
-  const totalPrice = document.getElementById('total-price');
-  totalPrice.innerHTML = `
-        <p>Subtotal: $${total.toFixed(2)}</p>
-        <p>Tax (10%): $${taxAmount.toFixed(2)}</p>
-        <p>Delivery Cost: $${deliveryCost.toFixed(2)}</p>
-        <p>Total Price: $${totalWithTax.toFixed(2)}</p>
-    `;
-}
-
-// Function to get delivery cost based on user selection
-function getDeliveryCost() {
-  const deliverySelect = document.getElementById('delivery-select');
-  const selectedCost = parseFloat(deliverySelect.value) || 0; // Default to 0 if nothing is selected
-
-  return selectedCost;
-}
-
-// Function to confirm purchase
-function confirmPurchase() {
-  document.textContent('Thank you for your purchase!');
-  cart = []; // Clear the cart after purchase
-  localStorage.removeItem('cart'); // Remove from local storage
-  updateCartCount();
-  loadCartItems(); // Update checkout page
-  document.getElementById('delivery-select').value = '0'; // Reset delivery option
-}
-
-document.addEventListener('DOMContentLoaded', displayProducts);
 
 // Display all products on the landing page
 function displayProducts() {
@@ -140,6 +88,8 @@ function displayProducts() {
   // Add event listeners to "Add to Cart" buttons
   attachAddToCartListeners();
 }
+
+document.addEventListener('DOMContentLoaded', displayProducts);
 
 // Show message when product is added to cart
 function showMessage(productId) {
@@ -177,42 +127,6 @@ function updateCartCount() {
     (sum, item) => sum + item.quantity,
     0
   )} items `;
-}
-
-// Function to load cart items on the checkout page
-function loadCartItems() {
-  const cartItemsDiv = document.getElementById('cart-items');
-  cartItemsDiv.innerHTML = '';
-
-  let total = 0;
-  cart.forEach((product, index) => {
-    const itemDiv = document.createElement('div');
-    itemDiv.classList.add('cart-item');
-    itemDiv.innerHTML = `
-            <img src="${product.img}" alt="${product.name}">
-            <p>${product.name} - $${product.price} x ${product.quantity}</p>
-            <button onclick="removeFromCart(${index})">Remove</button>
-            <input type="number" value="${product.quantity}" min="1" onchange="updateCart(${index}, this.value)">
-        `;
-    cartItemsDiv.appendChild(itemDiv);
-    total += product.price * product.quantity;
-  });
-
-  const taxRate = 0.1; // 10% tax
-  const deliveryCost = getDeliveryCost(); // Get selected delivery cost
-  const totalWithTax = total + total * taxRate + deliveryCost;
-
-  const totalPrice = document.getElementById('total-price');
-  totalPrice.textContent = `Total Price (including tax and delivery): $${totalWithTax.toFixed(
-    2
-  )}`;
-}
-
-// Function to get delivery cost based on user selection
-function getDeliveryCost() {
-  const deliverySelect = document.getElementById('delivery-select');
-  const selectedCost = parseFloat(deliverySelect.value) || 0; // Default to 0 if nothing is selected
-  return selectedCost;
 }
 
 // Function to remove item from cart
@@ -336,6 +250,15 @@ function loadCartItems() {
   document.getElementById('total-price').textContent = totalWithTax.toFixed(2);
 }
 
+// Function to get delivery cost based on user selection
+function getDeliveryCost() {
+  const deliverySelect = document.getElementById('delivery-select');
+  const selectedCost = parseFloat(deliverySelect.value) || 0; // Default to 0 if nothing is selected
+
+  return selectedCost;
+}
+
+
 // Function to confirm purchase
 function confirmPurchase() {
   document.getElementById('confirmed').textContent =
@@ -346,6 +269,7 @@ function confirmPurchase() {
   updateCartCount();
   loadCartItems(); // Update checkout page
   document.getElementById('delivery-select').value = '0'; // Reset delivery option
+  document.getElementById('total-price').textContent = 'Total Price: $0.00';
 }
 
 // Add product to cart
