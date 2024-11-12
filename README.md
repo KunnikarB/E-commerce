@@ -1,5 +1,7 @@
 # E-commerce 🛍️ 
 
+### This code is a basic but functional shopping cart and product display system. It includes product display, sorting, searching, cart management, checkout, and purchase confirmation features.
+
 ### JavaScript 👩🏻‍💻
 
 ![Screenshot 2024-11-05 at 17 19 19](https://github.com/user-attachments/assets/a9de9ddb-3cfa-4917-91a9-249a53c7c1eb)
