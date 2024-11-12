@@ -9,18 +9,6 @@
 
 ![Screenshot 2024-11-05 at 17 19 19](https://github.com/user-attachments/assets/a9de9ddb-3cfa-4917-91a9-249a53c7c1eb)
 
-### Features
-
-- Animation.
-- Add to Cart.
-- Searches products based on user input.
-- Use local-storage to toggle dark mode.
-- Sorts products by selected price criteria.
-- Updates the quantity of items in the cart.
-- Updates the cart item count displayed on the page.
-- Removes an item from the cart and updates the display.
-- Use localStorage to store data locally within a user's browser.
-
 
 
 <h3 align="center">Sorting products by price</h3> 
@@ -51,10 +39,23 @@
 
 ![Screenshot 2024-11-12 at 10 26 48](https://github.com/user-attachments/assets/4f3aec82-b28c-4035-a74b-8f67f25c7858)
 
+
+
+### Features
+
+- Animation.
+- Add to Cart.
+- Searches products based on user input.
+- Use local-storage to toggle dark mode.
+- Sorts products by selected price criteria.
+- Updates the quantity of items in the cart.
+- Updates the cart item count displayed on the page.
+- Removes an item from the cart and updates the display.
+- Use localStorage to store data locally within a user's browser.
+
 <div align="center">
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWlwemw2bG5veXRsYzcxbXBpeHprcHA4cWVicW1sYzN3Nmt2czFjbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L1R1tvI9svkIWwpVYr/giphy.gif" width="600" height="300"/>
 </div>
-
 
 ### Technologies Used 👩🏻‍💻
 - HTML
