@@ -253,11 +253,10 @@ function loadCartItems() {
 // Function to get delivery cost based on user selection
 function getDeliveryCost() {
   const deliverySelect = document.getElementById('delivery-select');
-  const selectedCost = parseFloat(deliverySelect.value) || 0; // Default to 0 if nothing is selected
+  const selectedCost = parseFloat(deliverySelect.value);
 
   return selectedCost;
 }
-
 
 // Function to confirm purchase
 function confirmPurchase() {
@@ -267,18 +266,17 @@ function confirmPurchase() {
   cart = []; // Clear the cart after purchase
   localStorage.removeItem('cart'); // Remove from local storage
   updateCartCount();
-  loadCartItems(); // Update checkout page
-  document.getElementById('delivery-select').value = '0'; // Reset delivery option
-  document.getElementById('total-price').textContent = 'Total Price: $0.00';
+  document.getElementById('delivery-select').value = 0; // Reset delivery cost
+  loadCartItems('delivery-select'); // Update checkout page
 }
 
 // Add product to cart
-document.getElementById('add-to-cart-btn').onclick = function () {
-  const params = new URLSearchParams(window.location.search);
-  const productId = params.get('id');
-  const product = products.find((p) => p.id == productId);
+// document.getElementById('add-to-cart-btn').onclick = function () {
+//   const params = new URLSearchParams(window.location.search);
+//   const productId = params.get('id');
+//   const product = products.find((p) => p.id == productId);
 
-  if (product) {
-    addToCart(product.id);
-  }
-};
+//   if (product) {
+//     addToCart(product.id);
+//   }
+// };
