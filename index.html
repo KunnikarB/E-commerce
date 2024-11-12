@@ -19,7 +19,7 @@
   <div>
     <img src="images/logo.png" class ="logo" alt="logo">
   </div>
-  <div>
+  
   <nav>
     <ul class="animate__animated animate__fadeInLeft">
       <li>
@@ -29,20 +29,24 @@
         <a href="checkout.html">
           Checkout 🛍️ 
         </a>
-      </li>
-      <li>
-        <a  href="checkout.html"> 
-        <span id="cart-count"></span> 🛒 </a>
-      </li>
+      </li> 
     </ul>
   </nav>
-  </div>
-  <div>
-  <button class="darkmode-button" onclick="myFunction()">Dark Mode</button>
-  </div>
+
+  <div class="your-cart">
+    <h3>Your Cart 🛒 </h3> 
+    <span id="cart-count"></span>
+  </div>   
 </header>
 
 <main class="main">
+  <!-- Theme Toggle Button -->
+  <button class="dark-btn" id="theme-toggle" onclick="toggleTheme()">
+      <i class="fa-solid fa-sun"></i>
+      <i class="fa-solid fa-moon"></i>
+    </button> 
+
+    <h1>Welcome to K-Commerce</h1>
   <!-- Search Bar and Sorting Options -->
   <div id="search-bar">
     <input type="text" id="search-input" placeholder="Search products..." oninput="searchProducts()">

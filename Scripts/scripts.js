@@ -100,6 +100,7 @@ function loadCartItems() {
 function getDeliveryCost() {
   const deliverySelect = document.getElementById('delivery-select');
   const selectedCost = parseFloat(deliverySelect.value) || 0; // Default to 0 if nothing is selected
+
   return selectedCost;
 }
 
@@ -110,10 +111,10 @@ function confirmPurchase() {
   localStorage.removeItem('cart'); // Remove from local storage
   updateCartCount();
   loadCartItems(); // Update checkout page
+  document.getElementById('delivery-select').value = '0'; // Reset delivery option
 }
 
 document.addEventListener('DOMContentLoaded', displayProducts);
-
 
 // Display all products on the landing page
 function displayProducts() {
@@ -153,7 +154,6 @@ function showMessage(productId) {
   }, 2000);
 }
 
-
 // Function to add product to cart
 function addToCart(productId) {
   const product = products.find((p) => p.id === productId);
@@ -168,7 +168,6 @@ function addToCart(productId) {
 
   localStorage.setItem('cart', JSON.stringify(cart)); // Store cart in local storage
   updateCartCount();
-  
 }
 
 // Function to update cart count
@@ -177,7 +176,7 @@ function updateCartCount() {
   cartCount.textContent = `${cart.reduce(
     (sum, item) => sum + item.quantity,
     0
-  )} item(s) in cart`;
+  )} items `;
 }
 
 // Function to load cart items on the checkout page
@@ -232,9 +231,9 @@ function updateCart(index, quantity) {
 }
 
 // Redirect to checkout page
-function redirectToCheckout() {
-  window.location.href = 'checkout.html';
-}
+// function redirectToCheckout() {
+//   window.location.href = 'checkout.html';
+// }
 
 // Search products based on user input
 function searchProducts() {
@@ -244,6 +243,7 @@ function searchProducts() {
   const filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(searchInput)
   );
+
   const productResults = document.getElementById('product-results');
   productResults.innerHTML = ''; // Clear current results
   filteredProducts.forEach((product) => {
@@ -251,7 +251,7 @@ function searchProducts() {
     productDiv.classList.add('product');
     productDiv.innerHTML = `
             <img src="${product.img}" alt="${product.name}">
-            <h3><a href="product.html?id=${product.id}">${product.name}</a></h3>
+            <h3>${product.name}</h3>
             <p>Price: $${product.price}</p>
             <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
         `;
@@ -280,7 +280,7 @@ function sortProducts() {
     productDiv.classList.add('product');
     productDiv.innerHTML = `
             <img src="${product.img}" alt="${product.name}">
-            <h3><a href="product.html?id=${product.id}">${product.name}</a></h3>
+            <h3>${product.name}</h3>
             <p>Price: $${product.price}</p>
             <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
         `;
@@ -338,14 +338,15 @@ function loadCartItems() {
 
 // Function to confirm purchase
 function confirmPurchase() {
-  document.getElementById('confirmed').textContent = 'Thank you for your purchase!';
+  document.getElementById('confirmed').textContent =
+    'Thank you for your purchase!';
 
   cart = []; // Clear the cart after purchase
   localStorage.removeItem('cart'); // Remove from local storage
   updateCartCount();
   loadCartItems(); // Update checkout page
+  document.getElementById('delivery-select').value = '0'; // Reset delivery option
 }
-
 
 // Add product to cart
 document.getElementById('add-to-cart-btn').onclick = function () {
