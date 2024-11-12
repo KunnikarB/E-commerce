@@ -24,6 +24,15 @@
 
 ![Screenshot 2024-11-07 at 16 54 28](https://github.com/user-attachments/assets/9b6e4c1c-12fa-4342-8713-d0a8183989c0)
 
+### Modified Dark Mode and Cart quanitity
+
+![Screenshot 2024-11-12 at 10 26 13](https://github.com/user-attachments/assets/30d513ed-4859-4639-9f02-e7bf55de6bda)
+
+### Added Confirm purcase function
+
+![Screenshot 2024-11-12 at 10 26 48](https://github.com/user-attachments/assets/4f3aec82-b28c-4035-a74b-8f67f25c7858)
+
+
 
 
 
