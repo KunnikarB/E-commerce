@@ -255,8 +255,20 @@ select option {
   transition: all 0.3s linear;
 }
 
-.your-cart:hover {
-  transform: scale(1.1);
+.your-cart a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s linear;
+}
+
+.your-cart a:hover {
+  background-color: #feadbb;
+  color: #dd4c93;
+  border: solid 1px #fff;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .checkout-grid {
