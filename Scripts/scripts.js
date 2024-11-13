@@ -230,6 +230,10 @@ function sortProducts() {
             <img src="${product.img}" alt="${product.name}">
             <h3>${product.name}</h3>
             <p>Price: $${product.price}</p>
+            <div class ="added-to-cart js-added-to-cart-${product.id}" >
+              <img src="images/checkmark.png" alt="checked">
+              <p>Added</p>
+            </div>
             <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
         `;
     productResults.appendChild(productDiv);
@@ -258,6 +262,10 @@ function searchProducts() {
             <img src="${product.img}" alt="${product.name}">
             <h3>${product.name}</h3>
             <p>Price: $${product.price}</p>
+            <div class ="added-to-cart js-added-to-cart-${product.id}" >
+              <img src="images/checkmark.png" alt="checked">
+              <p>Added</p>
+            </div>
             <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
         `;
     productResults.appendChild(productDiv);
