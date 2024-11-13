@@ -120,17 +120,11 @@ nav ul li a:hover {
   border-radius: 5px;
   font-size: 16px;
 }
-@media screen and (max-width: 320px) {
-  #search-input,
-  #sort-select {
-    padding: 5px;
-    margin: 5px;
-    border: 1px solid violet;
-    border-radius: 5px;
-    font-size: 12px;
+
+@media screen and (max-width: 768px) {
+  .dark-btn {
+    top: 17%;
   }
-}
-@media screen and (max-width: 600px) {
   #search-input,
   #sort-select {
     display: block;
@@ -139,6 +133,19 @@ nav ul li a:hover {
 
   .logo {
     display: none;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .dark-btn {
+    top: 17%;
+  }
+    
+}
+
+@media screen and (max-width: 320px) {
+  .dark-btn {
+    top: 18%;
   }
 }
 
@@ -410,9 +417,28 @@ select option {
 
 @media  (max-width: 320px) {
 
+  .dark-btn {
+    top: 0;
+  }
+
   #cart-items button {
     width: 30%;
   }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .your-cart h3, nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  .your-cart {
+    display: flex;
+  }
+
+
 
   .payment-summary p {
     width: 60%;
@@ -420,10 +446,6 @@ select option {
 
   .payment-summary button {
     width: 60%;
-  }
-
-  .darkmode-button {
-    display: none;
   }
 }
 
